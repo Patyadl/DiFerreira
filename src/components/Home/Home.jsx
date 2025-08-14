@@ -3,8 +3,26 @@ import NavBar from "../Navbar/NavBar";
 import logo_loja_menor from "../../Images/Home/logo_loja_menor.png"
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 import {FiMail} from "react-icons/fi"
+import camisa1 from "../../Images/Camisas/IMG_1421.png"
+import goldenBranco from "../../Images/Tenis/goldenBranco.jpg"
+import  camisas from "../../Images/Variedade/camisas.png"
+import  carteira from "../../Images/Variedade/carteira.png"
+import  sapatos from "../../Images/Variedade/sapatos.png"
+import  tenis from "../../Images/Variedade/tenis.png"
+import  goldenPreto from "../../Images/Variedade/tenis2.jpg"
+import  celular from "../../Images/MercadoPago/image 31.png"
+import  pagamento from "../../Images/MercadoPago/image 32.png"
+import  maos from "../../Images/MercadoPago/image 33.png"
+
 
 function Home() {
+  const categorias = [
+    { nome: "Sapato", img: camisas },
+    { nome: "Carteira", img: carteira },
+    { nome: "Camisa", img: sapatos },
+    { nome: "Tenis", img: tenis }
+  ];
+
   return (
     <main className="bg-white text-gray-900">
 
@@ -43,93 +61,167 @@ function Home() {
 
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl  mb-6 text-center font-medium">Pronta entrega</h2>
+          <h2 className="text-2xl  text-center font-medium">Pronta entrega</h2>
+         
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1,2,3].map((item) => (
-              <div key={item} className="bg-yellow-400 p-4 text-center rounded-md">
+             
+             <div key={item} className=" p-5 text-center ">
             
-
-                <div className="bg-gray-200 h-40 mb-4">Imagem Camisa</div>
-                <h4 className="font-semibold">Camisa Marca</h4>
+                <div className="flex flex-col items-center p-20 ">
+                             <img src={camisa1} alt="camisa" />
+                            </div>
+                
+                <h4 className="font-extralight">Camisa Marca</h4>
                 <p>Tamanhos: P, M, G</p>
                 <p>Cores: Azul, Branco</p>
                 <p className="mt-2 font-bold">R$ 450,00</p>
+            
               </div>
+              
             ))}
+            
           </div>
         </div>
       </section>
 
-      <section className="bg-black text-yellow-400 py-8">
-        <div className="container mx-auto px-4 text-center space-x-8">
-          <span className="mx-4 cursor-pointer">Marca 1</span>
-          <span className="mx-4 cursor-pointer">Marca 2</span>
-          <span className="mx-4 cursor-pointer">Marca 3</span>
+      <section className="bg-black text-yellow-400 py-8 h-80">
+        
+        <div className="container mx-auto  text-center space-x-8 ">
+          <div className="text-2xl mb-16"><h4 className="font-extralight">Nossas Marcas</h4></div>
+          
+          <span className="mx-4 cursor-pointer text-xl text-#F4F4F4">Palm Angels</span>
+          <span className="mx-4 cursor-pointer text-xl  text-#F4F4F4">Moncler</span>
+          <span className="mx-4 cursor-pointer text-xl text-#F4F4F4">Off-White</span>
+         <span className="mx-4 cursor-pointer text-xl text-#F4F4F4">Gallery Dept</span>
+       <p className="mb-4"></p>
+
+          <span className="mx-4 cursor-pointer  text-xl text-#F4F4F4">Essentials</span>
+          <span className="mx-4 cursor-pointer text-xl text-#F4F4F4">Casablanca</span>
+        <span className="mx-4 cursor-pointer text-xl text-#F4F4F4">Represent</span>
+          <span className="mx-4 cursor-pointer  text-xl text-#F4F4F4">Ame</span>
+         <span className="mx-4 cursor-pointer  text-xl text-#F4F4F4">Golden Goose</span>
+         
         </div>
       </section>
 
-      <section className="py-8">
+    <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-medium mb-6 text-center">Os melhores preços</h2>
+          <h2 className="text-2xl  text-center font-medium">Os melhores preços</h2>
+         
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1,2,3].map((item) => (
-              <div key={item} className="bg-yellow-400 p-4 text-center rounded-md">
-                <div className="bg-gray-200 h-40 mb-4">Imagem Tênis</div>
-                <h4 className="font-semibold">Tênis Marca</h4>
-                <p>Tamanhos: 40 – 49</p>
-                <p>Cores: Preto</p>
-                <p className="mt-2 font-bold">R$ 1.450,00</p>
+             
+             <div key={item} className=" p-5 text-center ">
+            
+                <div className="flex flex-col items-center p-20 ">
+                             <img src={goldenBranco} alt="camisa" />
+                            </div>
+                
+                <h4 className="font-extralight">Camisa Marca</h4>
+                <p>Tamanhos: P, M, G</p>
+                <p>Cores: Azul, Branco</p>
+                <p className="mt-2 font-bold">R$ 450,00</p>
+            
               </div>
+              
             ))}
+            
           </div>
         </div>
       </section>
 
-      <section className="bg-black text-white py-8">
+    <section className="bg-black text-white py-8  h-80">
+      <div className="container mx-auto px-4 mt-8">
+        <h2 className="text-center text-yellow-400 text-2xl  mb-10">
+          Variedade
+        </h2>
+        <div className="flex justify-center space-x-32">
+          {categorias.map((categoria) => (
+            <div
+              key={categoria.nome}
+              className="w-24 h-24 rounded-full flex items-center justify-center overflow-hidden"
+            >
+              <img
+                src={categoria.img}
+                alt={categoria.nome}
+                className=" object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+   
+     <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-yellow-400 text-xl font-medium mb-4">Variedade</h2>
-          <div className="flex justify-center space-x-6">
-            {["Sapato", "Carteira", "Camisa", "Tênis"].map((categoria) => (
-              <div key={categoria} className="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center">
-                {categoria}
+          <h2 className="text-2xl  text-center font-medium">Qualidade</h2>
+         
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[1,2,3].map((item) => (
+             
+             <div key={item} className=" p-5 text-center ">
+            
+                <div className="flex flex-col items-center p-20 ">
+                             <img src={goldenPreto} alt="camisa" />
+                            </div>
+                
+                <h4 className="font-extralight">Camisa Marca</h4>
+                <p>Tamanhos: P, M, G</p>
+                <p>Cores: Azul, Branco</p>
+                <p className="mt-2 font-bold">R$ 450,00</p>
+            
               </div>
+              
             ))}
+            
           </div>
         </div>
       </section>
+     
+<section className="bg-black py-8 relative">
+<div className="flex flex-row items-start justify-between relative">
+  <div className="sticky top- left-0 self-start flex-shrink-0">
+    <img
+      src={celular}
+      alt="Celular"
+      className="w-64 h-auto object-contain"
+    />
+  </div>
+
+    <div className="flex flex-col items-start space-y-6 text-left">
+      
+
+      <div className="flex flex-row items-start space-x-4">
+        <div>
+          <p className="text-yellow-400 text-2xl font-semibold leading-tight">
+            Compras práticas e seguras!
+          </p>
+          <p className="text-white text-lg">
+            Por meio do Mercado Pago.
+          </p>
+        </div>
+        <img
+          src={maos}
+          alt="Mãos"
+          className="w-16 h-auto object-contain"
+        />
+      </div>
 
    
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-medium mb-6 text-center">Qualidade</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1,2,3].map((item) => (
-              <div key={item} className="bg-yellow-400 p-4 text-center rounded-md">
-                <div className="bg-gray-200 h-40 mb-4">Imagem Sapato</div>
-                <h4 className="font-semibold">Sapato Marca</h4>
-                <p>Tamanhos: 40 – 49</p>
-                <p>Cores: Preto</p>
-                <p className="mt-2 font-bold">R$ 1.450,00</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="flex items-end">
+        <img
+          src={pagamento}
+          alt="Pagamento"
+          className="w-64 h-auto object-contain"
+        />
+      </div>
+    </div>
 
-     
-      <section className="bg-black text-white py-8">
-        <div className="container mx-auto px-4 flex flex-col items-center space-y-4 text-center">
-          <p className="text-lg">Compras práticas e seguras! Por meio do Mercado Pago.</p>
-          <div className="bg-yellow-400 p-4 rounded-md flex space-x-4">
-            <span>Ícone Mercado Pago</span>
-            <div className="flex flex-col text-black">
-              <span>Dinheiro</span>
-              <span>Cartão de Crédito</span>
-              <span>PIX e Boleto</span>
-            </div>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
+
+
 
      
       <section className="bg-yellow-400 text-black py-8">

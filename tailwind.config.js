@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
        colors:{
-       '#EDF0B5': '#EDF0B5'
+       '#EDF0B5': '#EDF0B5',
+       '#F1D43B' : '#F1D43B',
+       "#F4F4F4": '#F4F4F4'
     },
      fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

@@ -8,10 +8,10 @@ import Rodape from "../Rodape/Rodape"
 
 function Home() {
   const categorias = [
-    { nome: "Sapato", img: "/Variedade/camisas.png" },
-    { nome: "Carteira", img: "/Variedade/carteira.png" },
-    { nome: "Camisa", img: "/Variedade/sapatos.png" },
-    { nome: "Tenis", img: "/Variedade/tenis.png" },
+    { nome: "Sapato", img: "/Variedade/camisasCirculo.png" },
+    { nome: "Carteira", img: "/Variedade/carteiraCirculo.png" },
+    { nome: "Camisa", img: "/Variedade/sapatosCirculo.png" },
+    { nome: "Tenis", img: "/Variedade/tenisCirculo.png" },
   ]
 
   return (
@@ -23,7 +23,7 @@ function Home() {
         <div className="container mx-auto text-center px-4">
           <div className="flex justify-center mb-4">
             <img
-              src="/Home/logo_loja_menor.png"
+              src="/Home/logoLojaMenor.png"
               alt="logo DiFerreira"
               className="w-14 sm:w-20 h-auto"
             />
@@ -66,7 +66,7 @@ function Home() {
                     </h5>
                     <Link to="/comprar" className="link text-inherit">
                       <img
-                        src="/Camisas/IMG_1421.png"
+                        src="/Camisas/pretaAngels.png"
                         alt="camisa"
                         className="w-full h-auto object-contain"
                       />
@@ -89,7 +89,8 @@ function Home() {
           <h4 className="text-xl sm:text-2xl font-extralight mb-8">
             Nossas Marcas
           </h4>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-5 text-white text-sm sm:text-lg">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-5
+           text-white text-sm sm:text-lg">
             <p>Palm Angels</p>
             <p>Moncler</p>
             <p>Off-White</p>
@@ -195,10 +196,13 @@ function Home() {
 
 
       <section className="bg-black min-h-[400px] py-10 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
-        <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-6 lg:px-12">
-          <div className="flex flex-col justify-between items-center lg:items-start text-center lg:text-left">
+        <div className="container mx-auto flex flex-col 
+        lg:flex-row justify-between items-center px-6 lg:px-12">
+          <div className="flex flex-col justify-between
+           items-center lg:items-start text-center lg:text-left">
             <div className="mb-6 mt-10 lg:mt-20">
-              <p className="text-yellow-400 text-xl sm:text-2xl lg:text-3xl font-extralight leading-tight">
+              <p className="text-yellow-400 text-xl sm:text-2xl
+               lg:text-3xl font-extralight leading-tight">
                 Compras práticas e seguras!
               </p>
               <p className="text-white text-base sm:text-lg lg:text-xl">
@@ -206,19 +210,19 @@ function Home() {
               </p>
             </div>
             <img
-              src="/MercadoPago/image 31.png"
+              src="/MercadoPago/celularMercado.png"
               alt="Celular"
               className="w-32 sm:w-40 lg:w-52 mt-6 hidden lg:block"
             />
           </div>
           <div className="flex flex-col items-center space-y-4 lg:space-y-6 mt-6 lg:mt-0">
             <img
-              src="/MercadoPago/image 33.png"
+              src="/MercadoPago/logoMaos.png"
               alt="Mãos"
               className="w-14 sm:w-16 lg:w-20 h-auto object-contain"
             />
             <img
-              src="/MercadoPago/image 32.png"
+              src="/MercadoPago/formasPagamento.png"
               alt="Pagamento"
               className="w-32 sm:w-44 lg:w-60 h-auto object-contain"
             />
@@ -229,7 +233,7 @@ function Home() {
       <section className="mt-16 mb-20 px-4">
         <div className="flex justify-center">
      <img 
-  src="/Home/enviamos.png" 
+  src="/Home/enviamosFrete.png" 
   alt="enviamos para todo brasil" 
   className="max-w-full h-auto object-contain" 
 />

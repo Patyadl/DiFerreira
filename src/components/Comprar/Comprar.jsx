@@ -3,8 +3,8 @@ import NavBar from "../Navbar/NavBar";
 
 function Comprar() {
   const imagens = {
-    preto: ["/Camisas/IMG_1421.png", "/Camisas/IMG_1414.png"],
-    azul: ["/MercadoPago/image 32.png"],
+    preto: ["/Camisas/pretaAngels.png", "/Camisas/pretaVersoAngels.png"],
+    azul: ["/MercadoPago/formasPagamento.png"],
   };
 
   const [corSelecionada, setCorSelecionada] = useState("preto");
@@ -152,7 +152,7 @@ function Comprar() {
 
         <section className="flex items-center justify-center mt-10">
           <img
-            src="/MercadoPago/mercadopago.png"
+            src="/MercadoPago/mercadoPago.png"
             alt="logo mercadopago"
             className="w-32 sm:w-40 md:w-56 h-auto object-contain"
           />

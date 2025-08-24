@@ -31,7 +31,7 @@ function Acessorios() {
                 className="flex flex-col items-center p-8 text-center"
               >
                 <div className="flex flex-col items-center w-44">
-                  <img src="/Camisas/IMG_1421.png" alt="camisa" />
+                 <img src="/Camisas/pretaAngels.png" alt="camisa" />
                 </div>
 
                 <h4 className="font-extralight mt-3">Camisa Marca</h4>

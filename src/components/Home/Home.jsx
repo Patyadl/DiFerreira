@@ -1,45 +1,40 @@
-import React  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import NavBar from "../Navbar/NavBar";
-import logo_loja_menor from "../../Images/Home/logo_loja_menor.png"
+import NavBar from "../Navbar/NavBar"
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
-import {FiMail} from "react-icons/fi"
-import camisa1 from "../../Images/Camisas/IMG_1421.png"
-import goldenBranco from "../../Images/Tenis/goldenBranco.jpg"
-import  camisas from "../../Images/Variedade/camisas.png"
-import  carteira from "../../Images/Variedade/carteira.png"
-import  sapatos from "../../Images/Variedade/sapatos.png"
-import  tenis from "../../Images/Variedade/tenis.png"
-import  goldenPreto from "../../Images/Variedade/tenis2.jpg"
-import  celular from "../../Images/MercadoPago/image 31.png"
-import  pagamento from "../../Images/MercadoPago/image 32.png"
-import  maos from "../../Images/MercadoPago/image 33.png"
-import enviamos from "../../Images/Home/enviamos.png"
-import Rodape from "../Rodape/Rodape";
+import { FiMail } from "react-icons/fi";
+import Rodape from "../Rodape/Rodape"
 
 
 function Home() {
   const categorias = [
-    { nome: "Sapato", img: camisas },
-    { nome: "Carteira", img: carteira },
-    { nome: "Camisa", img: sapatos },
-    { nome: "Tenis", img: tenis }
-  ];
+    { nome: "Sapato", img: "/Variedade/camisas.png" },
+    { nome: "Carteira", img: "/Variedade/carteira.png" },
+    { nome: "Camisa", img: "/Variedade/sapatos.png" },
+    { nome: "Tenis", img: "/Variedade/tenis.png" },
+  ]
 
   return (
     <main className="bg-white text-gray-900 pt-48 sm:pt-48">
+      <NavBar />
 
-     <NavBar/>
 
       <section className="bg-gradient-to-b from-yellow-200 to-white py-6">
         <div className="container mx-auto text-center px-4">
           <div className="flex justify-center mb-4">
-            <img src={logo_loja_menor} alt="logo DiFerreira" className="w-14 sm:w-20 h-auto" />
+            <img
+              src="/Home/logo_loja_menor.png"
+              alt="logo DiFerreira"
+              className="w-14 sm:w-20 h-auto"
+            />
           </div>
-          <h2 className="text-lg sm:text-2xl font-semibold">O básico aqui é ser extraordinário.</h2>
+          <h2 className="text-lg sm:text-2xl font-semibold">
+            O básico aqui é ser extraordinário.
+          </h2>
           <h3 className="text-base sm:text-xl mt-1 font-light">Artigos de luxo</h3>
         </div>
       </section>
+
 
       <section className="mb-12 sm:mb-16">
         <div className="flex justify-center items-center space-x-6 sm:space-x-10 flex-wrap">
@@ -49,73 +44,94 @@ function Home() {
         </div>
       </section>
 
-
+ 
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">Pronta entrega</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
-          gap-6 ">
-            {[1,2,3]
-            .slice(0, window.innerWidth < 640 ? 2 : 3)
-            .map((item) => (
-              <div key={item} className="flex flex-col items-center p-4 sm:p-8 text-center">
-                <div className="flex flex-col items-center w-full max-w-[180px]">
-                  <h5 className="text-sm sm:text-base mb-2">clique nesta camisa
-                     (teste para mostrar fluxo do site)</h5>
-                  <Link to="/comprar" className="link text-inherit">
-                    <img src={camisa1} alt="camisa" className="w-full h-auto object-contain" />
-                  </Link>
+          <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">
+            Pronta entrega
+          </h2>
+          <div
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+          >
+            {[1, 2, 3]
+              .slice(0, window.innerWidth < 640 ? 2 : 3)
+              .map((item) => (
+                <div
+                  key={item}
+                  className="flex flex-col items-center p-4 sm:p-8 text-center"
+                >
+                  <div className="flex flex-col items-center w-full max-w-[180px]">
+                    <h5 className="text-sm sm:text-base mb-2">
+                      clique nesta camisa (teste para mostrar fluxo do site)
+                    </h5>
+                    <Link to="/comprar" className="link text-inherit">
+                      <img
+                        src="/Camisas/IMG_1421.png"
+                        alt="camisa"
+                        className="w-full h-auto object-contain"
+                      />
+                    </Link>
+                  </div>
+                  <h4 className="font-extralight mt-3">Camisa Marca</h4>
+                  <p>Tamanhos: P, M, G</p>
+                  <p>Cores: Azul, Branco</p>
+                  <p className="mt-2 font-bold">R$ 450,00</p>
                 </div>
-                <h4 className="font-extralight mt-3">Camisa Marca</h4>
-                <p>Tamanhos: P, M, G</p>
-                <p>Cores: Azul, Branco</p>
-                <p className="mt-2 font-bold">R$ 450,00</p>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
 
-    <section className="bg-black text-yellow-400 py-14 min-h-[300px] 
-  shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
-  <div className="container mx-auto text-center px-4">
-    <h4 className="text-xl sm:text-2xl font-extralight mb-8">Nossas Marcas</h4>
-    <div className="flex flex-wrap justify-center gap-4 sm:gap-5 text-white text-sm sm:text-lg">
-      <p>Palm Angels</p>
-      <p>Moncler</p>
-      <p>Off-White</p>
-      <p>Gallery Dept</p>
 
-      <p className="w-full"></p>
-
-      <p>Essentials</p>
-      <p>Casablanca</p>
-      <p>Represent</p>
-      <p>Ame</p>
-      <p>Golden Goose</p>
-    </div>
-  </div>
-</section>
-
+      <section className="bg-black text-yellow-400 py-14 min-h-[300px] 
+      shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
+        <div className="container mx-auto text-center px-4">
+          <h4 className="text-xl sm:text-2xl font-extralight mb-8">
+            Nossas Marcas
+          </h4>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-5 text-white text-sm sm:text-lg">
+            <p>Palm Angels</p>
+            <p>Moncler</p>
+            <p>Off-White</p>
+            <p>Gallery Dept</p>
+            <p className="w-full"></p>
+            <p>Essentials</p>
+            <p>Casablanca</p>
+            <p>Represent</p>
+            <p>Ame</p>
+            <p>Golden Goose</p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">Os melhores preços</h2>
-         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
-          gap-6 ">
-            {[1,2,3]
-            .slice(0, window.innerWidth < 640 ? 2 : 3)
-            .map((item) => (
-              <div key={item} className="flex flex-col items-center p-4 sm:p-8 text-center">
-                <div className="flex flex-col items-center w-full max-w-[180px]">
-                  <img src={goldenBranco} alt="camisa" className="w-full h-auto object-contain" />
+          <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">
+            Os melhores preços
+          </h2>
+          <div
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+          >
+            {[1, 2, 3]
+              .slice(0, window.innerWidth < 640 ? 2 : 3)
+              .map((item) => (
+                <div
+                  key={item}
+                  className="flex flex-col items-center p-4 sm:p-8 text-center"
+                >
+                  <div className="flex flex-col items-center w-full max-w-[180px]">
+                    <img
+                      src="/Tenis/goldenBranco.jpg"
+                      alt="Tênis branco"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <h4 className="font-extralight">Tênis Marca</h4>
+                  <p>Tamanhos: P, M, G</p>
+                  <p>Cores: Azul, Branco</p>
+                  <p className="mt-2 font-bold">R$ 450,00</p>
                 </div>
-                <h4 className="font-extralight">Tênis Marca</h4>
-                <p>Tamanhos: P, M, G</p>
-                <p>Cores: Azul, Branco</p>
-                <p className="mt-2 font-bold">R$ 450,00</p>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
@@ -123,12 +139,21 @@ function Home() {
   
       <section className="bg-black text-white py-16 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
         <div className="container mx-auto px-4">
-          <h2 className="text-center text-yellow-400 text-xl sm:text-2xl mb-10">Variedade</h2>
+          <h2 className="text-center text-yellow-400 text-xl sm:text-2xl mb-10">
+            Variedade
+          </h2>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-12 lg:gap-20">
             {categorias.map((categoria) => (
-              <div key={categoria.nome} className="w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32
-               rounded-full flex items-center justify-center overflow-hidden">
-                <img src={categoria.img} alt={categoria.nome} className="object-contain w-full h-full" />
+              <div
+                key={categoria.nome}
+                className="w-16 sm:w-24 lg:w-32 h-16 sm:h-24 
+                lg:h-32 rounded-full flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src={categoria.img}
+                  alt={categoria.nome}
+                  className="object-contain w-full h-full"
+                />
               </div>
             ))}
           </div>
@@ -138,27 +163,37 @@ function Home() {
 
       <section className="py-8">
         <div className="container mx-auto px-4">
-          <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">Qualidade</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
-          gap-6 ">
-            {[1,2,3]
-            .slice(0, window.innerWidth < 640 ? 2 : 3)
-            .map((item) => (
-              <div key={item} className="flex flex-col items-center p-4 sm:p-8 text-center">
-                <div className="flex flex-col items-center w-full max-w-[180px]">
-                  <img src={goldenPreto} alt="camisa" className="w-full h-auto object-contain" />
+          <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">
+            Qualidade
+          </h2>
+          <div
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6"
+          >
+            {[1, 2, 3]
+              .slice(0, window.innerWidth < 640 ? 2 : 3)
+              .map((item) => (
+                <div
+                  key={item}
+                  className="flex flex-col items-center p-4 sm:p-8 text-center"
+                >
+                  <div className="flex flex-col items-center w-full max-w-[180px]">
+                    <img
+                      src="/Variedade/tenis2.jpg"
+                      alt="Tênis preto"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <h4 className="font-extralight">Tênis Marca</h4>
+                  <p>Tamanhos: P, M, G</p>
+                  <p>Cores: Azul, Branco</p>
+                  <p className="mt-2 font-bold">R$ 450,00</p>
                 </div>
-                <h4 className="font-extralight">Tênis Marca</h4>
-                <p>Tamanhos: P, M, G</p>
-                <p>Cores: Azul, Branco</p>
-                <p className="mt-2 font-bold">R$ 450,00</p>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </section>
 
- 
+
       <section className="bg-black min-h-[400px] py-10 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
         <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-6 lg:px-12">
           <div className="flex flex-col justify-between items-center lg:items-start text-center lg:text-left">
@@ -170,24 +205,39 @@ function Home() {
                 Por meio do Mercado Pago.
               </p>
             </div>
-            <img src={celular} alt="Celular" className="w-32 sm:w-40 lg:w-52 mt-6 hidden lg:block" />
+            <img
+              src="/MercadoPago/image 31.png"
+              alt="Celular"
+              className="w-32 sm:w-40 lg:w-52 mt-6 hidden lg:block"
+            />
           </div>
           <div className="flex flex-col items-center space-y-4 lg:space-y-6 mt-6 lg:mt-0">
-            <img src={maos} alt="Mãos" className="w-14 sm:w-16 lg:w-20 h-auto object-contain" />
-            <img src={pagamento} alt="Pagamento" className="w-32 sm:w-44 lg:w-60 h-auto object-contain" />
+            <img
+              src="/MercadoPago/image 33.png"
+              alt="Mãos"
+              className="w-14 sm:w-16 lg:w-20 h-auto object-contain"
+            />
+            <img
+              src="/MercadoPago/image 32.png"
+              alt="Pagamento"
+              className="w-32 sm:w-44 lg:w-60 h-auto object-contain"
+            />
           </div>
         </div>
       </section>
 
-    
       <section className="mt-16 mb-20 px-4">
         <div className="flex justify-center">
-          <img src={enviamos} alt="enviamos para todo brasil" className="max-w-full h-auto object-contain" />
+     <img 
+  src="/Home/enviamos.png" 
+  alt="enviamos para todo brasil" 
+  className="max-w-full h-auto object-contain" 
+/>
+
         </div>
       </section>
 
-      <Rodape/>
-
+      <Rodape />
     </main>
   )
 }

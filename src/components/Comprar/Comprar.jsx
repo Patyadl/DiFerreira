@@ -1,25 +1,21 @@
 import React, { useState } from "react";
 import NavBar from "../Navbar/NavBar";
-import camisa1 from "../../Images/Camisas/IMG_1421.png";
-import camisa2 from "../../Images/Camisas/IMG_1414.png";
-import camisateste from "../../Images/MercadoPago/image 32.png";
-import mercadopago from "../../Images/MercadoPago/mercadopago.png";
 
 function Comprar() {
   const imagens = {
-    preto: [camisa1, camisa2],
-    azul: [camisateste],
-  }
+    preto: ["/Camisas/IMG_1421.png", "/Camisas/IMG_1414.png"],
+    azul: ["/MercadoPago/image 32.png"],
+  };
 
-  const [corSelecionada, setCorSelecionada] = useState("preto")
-  const [index, setIndex] = useState(0)
-  const [zoom, setZoom] = useState(false)
+  const [corSelecionada, setCorSelecionada] = useState("preto");
+  const [index, setIndex] = useState(0);
+  const [zoom, setZoom] = useState(false);
 
-  const fotos = imagens[corSelecionada]
+  const fotos = imagens[corSelecionada];
 
-  const proxima = () => setIndex((prev) => (prev + 1) % fotos.length)
+  const proxima = () => setIndex((prev) => (prev + 1) % fotos.length);
   const anterior = () =>
-    setIndex((prev) => (prev - 1 + fotos.length) % fotos.length)
+    setIndex((prev) => (prev - 1 + fotos.length) % fotos.length);
 
   return (
     <div className="mt-52 sm:mt-40 md:mt-40 ">
@@ -42,7 +38,6 @@ function Comprar() {
 
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-
           <div className="flex flex-col items-center">
             <div className="relative flex items-center justify-center">
               <img
@@ -74,18 +69,17 @@ function Comprar() {
               </button>
             </div>
 
-
-            <div className="flex gap-2 sm:gap-3 mt-2 md:mt-6 flex-wrap justify-center
-            ">
+            <div className="flex gap-2 sm:gap-3 mt-2 md:mt-6 flex-wrap justify-center">
               <button
                 onClick={() => {
                   setCorSelecionada("preto");
                   setIndex(0);
                 }}
-                className={`px-4 py-1 rounded-full border text-sm sm:text-base ${corSelecionada === "preto"
-                  ? "bg-black text-white"
-                  : "bg-gray-200 text-black"
-                  }`}
+                className={`px-4 py-1 rounded-full border text-sm sm:text-base ${
+                  corSelecionada === "preto"
+                    ? "bg-black text-white"
+                    : "bg-gray-200 text-black"
+                }`}
               >
                 Preto
               </button>
@@ -94,15 +88,15 @@ function Comprar() {
                   setCorSelecionada("azul");
                   setIndex(0);
                 }}
-                className={`px-4 py-1 rounded-full border text-sm sm:text-base ${corSelecionada === "azul"
-                  ? "bg-blue-500 text-white"
-                  : "bg-gray-200 text-black"
-                  }`}
+                className={`px-4 py-1 rounded-full border text-sm sm:text-base ${
+                  corSelecionada === "azul"
+                    ? "bg-blue-500 text-white"
+                    : "bg-gray-200 text-black"
+                }`}
               >
                 Azul
               </button>
             </div>
-
           </div>
 
           <div className="flex flex-col font-medium text-base sm:text-lg md:text-xl gap-3 sm:gap-5 text-center sm:text-left">
@@ -120,8 +114,11 @@ function Comprar() {
                     setCorSelecionada(cor);
                     setIndex(0);
                   }}
-                  className={`cursor-pointer hover:underline ${corSelecionada === cor ? "font-bold" : "text-gray-700"
-                    }`}
+                  className={`cursor-pointer hover:underline ${
+                    corSelecionada === cor
+                      ? "font-bold"
+                      : "text-gray-700"
+                  }`}
                 >
                   {cor.charAt(0).toUpperCase() + cor.slice(1)}
                   {i < Object.keys(imagens).length - 1 && ","}
@@ -134,28 +131,28 @@ function Comprar() {
             </p>
             <p className="text-sm text-gray-600 -mt-1">à vista</p>
 
-        <a 
-  href="https://mpago.li/2TtcNWC" 
-  target="_blank" 
-  rel="noopener noreferrer" 
-  className="link text-inherit"
->  <button
-              className="bg-yellow-400 text-black font-medium 
+            <a
+              href="https://mpago.li/2TtcNWC"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link text-inherit"
+            >
+              <button
+                className="bg-yellow-400 text-black font-medium 
     text-base sm:text-lg px-6 py-2 rounded-full shadow-md 
     hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0.5
     transition hover:bg-yellow-300 hover:text-gray-800 
     w-32 sm:w-48 mx-auto sm:mx-0"
-            >
-              Comprar
-            </button>
+              >
+                Comprar
+              </button>
             </a>
           </div>
-
         </div>
 
         <section className="flex items-center justify-center mt-10">
           <img
-            src={mercadopago}
+            src="/MercadoPago/mercadopago.png"
             alt="logo mercadopago"
             className="w-32 sm:w-40 md:w-56 h-auto object-contain"
           />
@@ -175,7 +172,7 @@ function Comprar() {
         </div>
       )}
     </div>
-  )
+  );
 }
 
 export default Comprar

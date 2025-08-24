@@ -73,23 +73,26 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-black text-yellow-400 py-14 min-h-[300px] 
-      shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
-        <div className="container mx-auto text-center px-4">
-          <h4 className="text-xl sm:text-2xl font-extralight mb-8">Nossas Marcas</h4>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-white text-sm sm:text-lg">
-            <span className="cursor-pointer">Palm Angels</span>
-            <span className="cursor-pointer">Moncler</span>
-            <span className="cursor-pointer">Off-White</span>
-            <span className="cursor-pointer">Gallery Dept</span>
-            <span className="cursor-pointer">Essentials</span>
-            <span className="cursor-pointer">Casablanca</span>
-            <span className="cursor-pointer">Represent</span>
-            <span className="cursor-pointer">Ame</span>
-            <span className="cursor-pointer">Golden Goose</span>
-          </div>
-        </div>
-      </section>
+    <section className="bg-black text-yellow-400 py-14 min-h-[300px] 
+  shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
+  <div className="container mx-auto text-center px-4">
+    <h4 className="text-xl sm:text-2xl font-extralight mb-8">Nossas Marcas</h4>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-5 text-white text-sm sm:text-lg">
+      <p>Palm Angels</p>
+      <p>Moncler</p>
+      <p>Off-White</p>
+      <p>Gallery Dept</p>
+
+      <p className="w-full"></p>
+
+      <p>Essentials</p>
+      <p>Casablanca</p>
+      <p>Represent</p>
+      <p>Ame</p>
+      <p>Golden Goose</p>
+    </div>
+  </div>
+</section>
 
 
       <section className="py-8">
@@ -112,12 +115,13 @@ function Home() {
       </section>
 
   
-      <section className="bg-black text-white py-10 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
+      <section className="bg-black text-white py-16 shadow-[0_15px_50px_rgba(0,0,0,0.5)]">
         <div className="container mx-auto px-4">
           <h2 className="text-center text-yellow-400 text-xl sm:text-2xl mb-10">Variedade</h2>
           <div className="flex flex-wrap justify-center gap-6 sm:gap-12 lg:gap-20">
             {categorias.map((categoria) => (
-              <div key={categoria.nome} className="w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32 rounded-full flex items-center justify-center overflow-hidden">
+              <div key={categoria.nome} className="w-16 sm:w-24 lg:w-32 h-16 sm:h-24 lg:h-32
+               rounded-full flex items-center justify-center overflow-hidden">
                 <img src={categoria.img} alt={categoria.nome} className="object-contain w-full h-full" />
               </div>
             ))}

@@ -26,7 +26,7 @@ function NavBar() {
       </Link>
     </div>
 
-    <div className="w-6"></div>
+    <div className=""></div>
   </div>
   
 </header >

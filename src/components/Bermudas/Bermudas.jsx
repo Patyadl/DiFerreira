@@ -10,16 +10,16 @@ function Bermudas() {
 
       <NavBar />
 
-  
+
       <section className="bg-gradient-to-b from-yellow-200 to-white 
        to-35% pt-12">
-        
-      
+
+
         <section className="flex items-center justify-center mb-10 mt-56">
           <Barra />
         </section>
 
-       
+
         <section className="flex items-center justify-start container mb-12">
           <h2 className="text-xl font-medium relative inline-block pl-9 pr-9">
             Bermudas
@@ -28,9 +28,9 @@ function Bermudas() {
           </h2>
         </section>
 
-    
+
         <section className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <div
                 key={item}
@@ -48,6 +48,7 @@ function Bermudas() {
             ))}
           </div>
         </section>
+
       </section>
 
       <Rodape />

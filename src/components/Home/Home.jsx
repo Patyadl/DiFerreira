@@ -53,8 +53,11 @@ function Home() {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">Pronta entrega</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1,2,3].map((item) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
+          gap-6 ">
+            {[1,2,3]
+            .slice(0, window.innerWidth < 640 ? 2 : 3)
+            .map((item) => (
               <div key={item} className="flex flex-col items-center p-4 sm:p-8 text-center">
                 <div className="flex flex-col items-center w-full max-w-[180px]">
                   <h5 className="text-sm sm:text-base mb-2">clique nesta camisa
@@ -98,13 +101,16 @@ function Home() {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">Os melhores preços</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1,2,3].map((item) => (
+         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
+          gap-6 ">
+            {[1,2,3]
+            .slice(0, window.innerWidth < 640 ? 2 : 3)
+            .map((item) => (
               <div key={item} className="flex flex-col items-center p-4 sm:p-8 text-center">
                 <div className="flex flex-col items-center w-full max-w-[180px]">
                   <img src={goldenBranco} alt="camisa" className="w-full h-auto object-contain" />
                 </div>
-                <h4 className="font-extralight">Camisa Marca</h4>
+                <h4 className="font-extralight">Tênis Marca</h4>
                 <p>Tamanhos: P, M, G</p>
                 <p>Cores: Azul, Branco</p>
                 <p className="mt-2 font-bold">R$ 450,00</p>
@@ -133,13 +139,16 @@ function Home() {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <h2 className="text-xl sm:text-2xl text-center font-medium mb-6">Qualidade</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1,2,3].map((item) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 
+          gap-6 ">
+            {[1,2,3]
+            .slice(0, window.innerWidth < 640 ? 2 : 3)
+            .map((item) => (
               <div key={item} className="flex flex-col items-center p-4 sm:p-8 text-center">
                 <div className="flex flex-col items-center w-full max-w-[180px]">
                   <img src={goldenPreto} alt="camisa" className="w-full h-auto object-contain" />
                 </div>
-                <h4 className="font-extralight">Camisa Marca</h4>
+                <h4 className="font-extralight">Tênis Marca</h4>
                 <p>Tamanhos: P, M, G</p>
                 <p>Cores: Azul, Branco</p>
                 <p className="mt-2 font-bold">R$ 450,00</p>

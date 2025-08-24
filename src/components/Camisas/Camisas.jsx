@@ -29,25 +29,26 @@ function Camisas() {
         </section>
 
     
-        <section className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div
-                key={item}
-                className="flex flex-col items-center p-8 text-center"
-              >
-                <div className="flex flex-col items-center w-44">
-                  <img src={camisa1} alt="camisa" />
-                </div>
+     <section className="container mx-auto px-4">
+  <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+    {[1, 2, 3, 4, 5, 6].map((item) => (
+      <div
+        key={item}
+        className="flex flex-col items-center p-8 text-center"
+      >
+        <div className="flex flex-col items-center w-44">
+          <img src={camisa1} alt="camisa" />
+        </div>
 
-                <h4 className="font-extralight mt-3">Camisa Marca</h4>
-                <p>Tamanhos: P, M, G</p>
-                <p>Cores: Azul, Branco</p>
-                <p className="mt-2 font-bold">R$ 450,00</p>
-              </div>
-            ))}
-          </div>
-        </section>
+        <h4 className="font-extralight mt-3">Camisa Marca</h4>
+        <p>Tamanhos: P, M, G</p>
+        <p>Cores: Azul, Branco</p>
+        <p className="mt-2 font-bold">R$ 450,00</p>
+      </div>
+    ))}
+  </div>
+</section>
+
       </section>
 
       <Rodape />

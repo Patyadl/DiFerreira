@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "../Navbar/NavBar"
 import Rodape from "../Rodape/Rodape"
 import Barra from "../BarraBusca/Barra"
+import camisaPretaAngels from "../../assets/camisas/preta-angels.png"
 
 function Sapatos() {
 
@@ -31,7 +32,7 @@ function Sapatos() {
                 className="flex flex-col items-center p-8 text-center"
               >
                 <div className="flex flex-col items-center w-44">
-                <img src="/camisas/preta-angels.png" alt="camisa" />
+                   <img src= {camisaPretaAngels} alt="camisa" />
                 </div>
 
                 <h4 className="font-extralight mt-3">Camisa Marca</h4>

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import NavBar from "../Navbar/NavBar";
+import logoMercadoPago from "../../assets/mercadopago/mercado-pago.png"
+import camisaPretaAngels from "../../assets/camisas/preta-angels.png"
+import camisaPretaAngelsVerso from "../../assets/camisas/preta-verso-angels.png"
+import formasPagamento from "../../assets/mercadopago/formas-pagamento.png"
 
 function Comprar() {
   const imagens = {
-    preto: ["/camisas/preta-angels.png", "/camisas/preta-verso-angels.png"],
-    azul: ["/mercadopago/formas-pagamento.png"],
+    preto: [camisaPretaAngels, camisaPretaAngelsVerso],
+    azul: [formasPagamento],
   };
 
   const [corSelecionada, setCorSelecionada] = useState("preto");
@@ -152,7 +156,7 @@ function Comprar() {
 
         <section className="flex items-center justify-center mt-10">
           <img
-            src="/mercadopago/mercado-pago.png"
+            src={logoMercadoPago}
             alt="logo mercadopago"
             className="w-32 sm:w-40 md:w-56 h-auto object-contain"
           />

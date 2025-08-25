@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import Menu from "./Menu/Menu"
 import { Link } from "react-router-dom"
+import logoLoja from "../../assets/navbar/logo-loja.png"
 
 function NavBar() {
   const [aberto, setAberto] = useState(false)
@@ -16,7 +17,7 @@ function NavBar() {
         <div className="flex flex-col items-center">
           <Link to="/" className="link text-inherit">
             <img
-              src="/navbar/logo-loja.png" 
+              src={logoLoja}
               alt="logo DiFerreira"
               className="w-40 sm:w-40 md:w-40 lg:w-40 h-auto"
             />

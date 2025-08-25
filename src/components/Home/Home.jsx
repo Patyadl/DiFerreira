@@ -6,6 +6,7 @@ import { FiMail } from "react-icons/fi";
 import Rodape from "../Rodape/Rodape"
 import logoLojaMenor from "../../assets/home/logo-loja-menor.png"
 import camisaPretaAngels from "../../assets/camisas/preta-angels.png"
+import tenisGoldenBranco from "../../assets/tenis/golden-branco.jpg"
 import tenisGoldenPreto from "../../assets/tenis/golden-preto.jpg"
 import mercaoPagoCelular from "../../assets/mercadopago/celular-mercado.png"
 import mercaoPagoMaos from "../../assets/mercadopago/logo-maos.png"
@@ -79,7 +80,7 @@ function Home() {
                     <Link to="/comprar" className="link text-inherit">
                       <img
                         src={camisaPretaAngels}
-                        alt="camisa"
+                        alt="camisa preta angels"
                         className="w-full h-auto object-contain"
                       />
                     </Link>
@@ -134,8 +135,8 @@ function Home() {
                 >
                   <div className="flex flex-col items-center w-full max-w-[180px]">
                     <img
-                      src={camisaPretaAngels}
-                      alt="camisa preta angels"
+                      src={tenisGoldenBranco}
+                      alt="tênis golden branco"
                       className="w-full h-auto object-contain"
                     />
                   </div>

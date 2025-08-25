@@ -1,5 +1,7 @@
 import React from "react"
 import { FaInstagram } from "react-icons/fa"
+import perfilLoja from "../../assets/rodape/perfil-loja.png"
+
 
 function Rodape() {
   return (
@@ -19,7 +21,7 @@ function Rodape() {
 
         <section className="w-full lg:w-auto flex justify-center lg:justify-start ">
           <img
-            src="/rodape/perfil-loja.png"
+            src={perfilLoja}
             alt="imagem do perfil da loja no instagram"
             className="w-40 sm:w-48 md:w-56 lg:w-auto h-auto object-contain"
           />

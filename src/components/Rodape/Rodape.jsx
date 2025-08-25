@@ -19,7 +19,7 @@ function Rodape() {
 
         <section className="w-full lg:w-auto flex justify-center lg:justify-start ">
           <img
-            src="/Rodape/perfilLoja.png"
+            src="/rodape/perfil-loja.png"
             alt="imagem do perfil da loja no instagram"
             className="w-40 sm:w-48 md:w-56 lg:w-auto h-auto object-contain"
           />

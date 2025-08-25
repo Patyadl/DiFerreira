@@ -8,10 +8,10 @@ import Rodape from "../Rodape/Rodape"
 
 function Home() {
   const categorias = [
-    { nome: "Sapato", img: "/Variedade/camisasCirculo.png" },
-    { nome: "Carteira", img: "/Variedade/carteiraCirculo.png" },
-    { nome: "Camisa", img: "/Variedade/sapatosCirculo.png" },
-    { nome: "Tenis", img: "/Variedade/tenisCirculo.png" },
+    { nome: "Sapato", img: "/variedade/camisas-circulo.png" },
+    { nome: "Carteira", img: "/variedade/carteira-circulo.png" },
+    { nome: "Camisa", img: "/variedade/sapatos-circulo.png" },
+    { nome: "Tenis", img: "/variedade/tenis-circulo.png" },
   ]
 
   return (
@@ -23,7 +23,7 @@ function Home() {
         <div className="container mx-auto text-center px-4">
           <div className="flex justify-center mb-4">
             <img
-              src="/Home/logoLojaMenor.png"
+              src="/home/logo-loja-menor.png"
               alt="logo DiFerreira"
               className="w-14 sm:w-20 h-auto"
             />
@@ -66,7 +66,7 @@ function Home() {
                     </h5>
                     <Link to="/comprar" className="link text-inherit">
                       <img
-                        src="/Camisas/pretaAngels.png"
+                        src="/camisas/preta-angels.png"
                         alt="camisa"
                         className="w-full h-auto object-contain"
                       />
@@ -122,7 +122,7 @@ function Home() {
                 >
                   <div className="flex flex-col items-center w-full max-w-[180px]">
                     <img
-                      src="/Tenis/goldenBranco.jpg"
+                      src="/tenis/golden-branco.jpg"
                       alt="Tênis branco"
                       className="w-full h-auto object-contain"
                     />
@@ -179,7 +179,7 @@ function Home() {
                 >
                   <div className="flex flex-col items-center w-full max-w-[180px]">
                     <img
-                      src="/Variedade/tenis2.jpg"
+                      src="/tenis/golden-preto.jpg"
                       alt="Tênis preto"
                       className="w-full h-auto object-contain"
                     />
@@ -210,19 +210,19 @@ function Home() {
               </p>
             </div>
             <img
-              src="/MercadoPago/celularMercado.png"
+              src="/mercadopago/celular-mercado.png"
               alt="Celular"
               className="w-32 sm:w-40 lg:w-52 mt-6 hidden lg:block"
             />
           </div>
           <div className="flex flex-col items-center space-y-4 lg:space-y-6 mt-6 lg:mt-0">
             <img
-              src="/MercadoPago/logoMaos.png"
+              src="/mercadopago/logo-maos.png"
               alt="Mãos"
               className="w-14 sm:w-16 lg:w-20 h-auto object-contain"
             />
             <img
-              src="/MercadoPago/formasPagamento.png"
+              src="/mercadopago/formas-pagamento.png"
               alt="Pagamento"
               className="w-32 sm:w-44 lg:w-60 h-auto object-contain"
             />
@@ -233,7 +233,7 @@ function Home() {
       <section className="mt-16 mb-20 px-4">
         <div className="flex justify-center">
      <img 
-  src="/Home/enviamosFrete.png" 
+  src="home/enviamos-frete.png" 
   alt="enviamos para todo brasil" 
   className="max-w-full h-auto object-contain" 
 />

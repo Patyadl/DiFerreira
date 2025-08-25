@@ -16,7 +16,7 @@ function NavBar() {
         <div className="flex flex-col items-center">
           <Link to="/" className="link text-inherit">
             <img
-              src="/NavBar/logoLoja.png" 
+              src="/navbar/logo-loja.png" 
               alt="logo DiFerreira"
               className="w-40 sm:w-40 md:w-40 lg:w-40 h-auto"
             />
